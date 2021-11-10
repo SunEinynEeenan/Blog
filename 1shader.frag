@@ -100,12 +100,12 @@ vec3 in_scatter(vec3 o, vec3 dir, vec2 e, vec3 l, float dither) {
             // the float we're multiplying by
             //is intensity slider ... 1. is fully opaque
             //lower is a bit transparent
-            scatter += vec3(1., 0., 0.)*interact.x*.05;
+            scatter += vec3(1., 0., 0.)*interact.x*.02;
         }
 
         if (v.y > 0.064 && length(v) < R_INNER + R_SPHERE)
         {
-            scatter += vec3(1., 0., 0.)*interact.x*.05;
+            scatter += vec3(1., 0., 0.)*interact.x*.02;
         }
 
         v += s;
