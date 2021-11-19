@@ -171,12 +171,12 @@ vec2 normMouse = u_mouse/u_resolution;
 
 //responsible for the center drop
 //that first argument scales so that the bottom left corner isn't 0,0 so the effect still exists
-vec2 cPos = .25+.25*(u_mouse/u_resolution) * (gl_FragCoord.xy / u_resolution.xy);
+vec2 cPos = .25*(u_mouse/u_resolution) * (gl_FragCoord.xy / u_resolution.xy);
 
 //mouse track
 float cLength = distance(u_mouse/u_resolution ,gl_FragCoord.xy/u_resolution.xy);
 
-vec2 uv = gl_FragCoord.xy/u_resolution.xy+(cPos/cLength)*cos(cLength*30.0-u_time*4.0)*0.05;
+vec2 uv = gl_FragCoord.xy/u_resolution.xy+(cPos/cLength)*cos(cLength*15.0-u_time*4.0)*0.05;
 
 //vec3 col = vec3(uv, 1.0);
  vec3 col = texture2D(u_tex0,uv).xyz;
