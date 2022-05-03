@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+
+<script type="text/javascript" src="https://rawgit.com/patriciogonzalezvivo/glslCanvas/master/dist/GlslCanvas.js"></script>
+
+<script>
+function playMusic(){
+  var music = new Audio('./assets/01. Tetso Cube Light Ride Master.wav');
+  music.play();
+  }
+
+
+function change(){
+document.getElementById("shader").style.visibility="visible";
+}
+
+</script>
+
+<style media="screen">
+
+
+  body{
+    background-color: white;
+  }
+
+  .shaderContainer{
+    border: 10px ridge blue;
+    width:500px;
+    height: 500px;
+  }
+
+  .border2{
+    border: 10px ridge purple;
+    width:520px;
+    height: 520px;
+
+  }
+
+    .button{
+      margin: 10% ;
+
+    }
+
+    .hide{
+      visibility: hidden;
+
+    }
+
+</style>
+
+
+<body>
+
+  <center>
+              <div class="border2">
+                <div class="shaderContainer"  width="500" height="500">
+                  <div class="">
+                    <canvas class="glslCanvas hide" id="shader" data-fragment-url="visualizer.frag" width="500" height="500"></canvas>
+                  </div>
+                </div>
+              </div>
+  </center>
+
+
+    <center>
+      <input class="button" type="button" value="Tetso Cube Lightride"
+              onclick=
+                "playMusic();
+                 change();
+                 document.body.style.backgroundColor = 'green';
+                 "
+                      />
+    </center>
+
+<!--
+    <a href="#" onclick="change();">Click Me</a><br/>
+<div id="d">This is just example</div> -->
+
+  <audio preload><source src="./assets/01. Tetso Cube Light Ride Master.wav" type="audio/x-wav" /></audio>
+
+
+
+</body>
+</html>
