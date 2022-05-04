@@ -214,6 +214,65 @@ white-space: pre;
 
 
 
+<div class="pre" style="background-image:url(assets/backgrounds/WATER/012.GIF); color: white">
+
+May 3 2022 thursday
+
+BlendArTrack mocap —> blender —> glTF
+
+
+tutorial —> cg tinker (creator of blendartrack)
+https://www.youtube.com/watch?v=KD2xsO160xk&ab_channel=cgtinker
+
+
+thanks to Phoebe M for rigging my mesh for me.... i was losing my mind with this conversion!
+
+
+*********************************
+
+create mesh for character
+rig it with Rigify plugin
+	add bone and delete it
+		use armature menu to get Super Face from rigify ‘samples’ ie presets
+			scale rig
+parent mesh TO RIG with automatic weights (tab to search)
+	that should be enough
+
+
+*********************************
+ONCE YOU HAVE RIGGED MESH YOU WANT TO ANIMATE WITH THE MOCAP DATA
+
+
+take vid in app export
+import data with plugin into blender
+	needs to be as animated empties and not mesh bc gltf cant do vertex animation, only skeletal
+		if ur rendering a video just use face mesh
+
+delete mocap parent’s keyframes (head tilt)
+reset position and rotation to 0
+scale up to match destination character mesh
+	 DO NOT APPLY TRANSFORMS TO MOCAP DATA yet
+create driver rig (press button), copy scale data
+	NOW APPLY SCALE TRANSFORM TO THE CREATED RIG — AFTER THIS U CAN HIDE OR DELETE IT!
+generate driver (button) and wait for a while
+if it works good go to action editor
+	create new action and name it
+		now click last button in plugin menu which is MAKE ACTION
+			it will take a bit again
+now just go to character rig and select the right action
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
 <hr size="3"> <!-- hr size 3 between EACH BLOG POST-->
 
 <div class="pre">
