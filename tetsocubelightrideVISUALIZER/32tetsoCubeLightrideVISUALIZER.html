@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html >
 
 
 <script type="text/javascript" src="https://rawgit.com/patriciogonzalezvivo/glslCanvas/master/dist/GlslCanvas.js"></script>
@@ -26,20 +26,22 @@ document.getElementById("shader").style.visibility="visible";
   }
 
   .shaderContainer{
-    border: 10px ridge blue;
-    width:500px;
-    height: 500px;
+    border: 8px ridge blue;
+    width:375px;
+    height: 375px;
   }
 
   .border2{
-    border: 10px ridge purple;
-    width:520px;
-    height: 520px;
+    border: 8px ridge purple;
+    width:391px;
+    height: 391px;
 
   }
 
     .button{
       margin: 5% ;
+      transform:scale(.75);
+
 
     }
 
@@ -50,6 +52,7 @@ document.getElementById("shader").style.visibility="visible";
 
     .webring{
       margin:3%;
+
 
     }
 
@@ -65,9 +68,9 @@ document.getElementById("shader").style.visibility="visible";
 
   <center>
               <div class="border2">
-                <div class="shaderContainer"  width="500" height="500">
+                <div class="shaderContainer"  width="375px" height="375px">
                   <div class="">
-                    <canvas class="glslCanvas hide" id="shader" data-fragment-url="visualizer.frag" width="500" height="500"></canvas>
+                    <canvas class="glslCanvas hide" id="shader" data-fragment-url="visualizer.frag" width="375px" height="375px"></canvas>
                   </div>
                 </div>
               </div>
@@ -96,7 +99,7 @@ document.getElementById("shader").style.visibility="visible";
 
 
   <!-- ************ tandy web ring ******************* -->
-                     <div class="webring">
+                     <div class="webring" >
                          <webring-css site="https://the-people-s-coalition-of-tandy.github.io/PCoTandy/">
                            <style>
                               .webring {
@@ -118,7 +121,7 @@ document.getElementById("shader").style.visibility="visible";
                                 margin-bottom: 10px;
                               }
                             </style>
-                            <div class="webring">
+                            <div class="webring"     style="transform:scale(.75)">
                                 <div id="copy">
                                   <strong>The Tandy Webring</strong>
 
@@ -140,7 +143,7 @@ document.getElementById("shader").style.visibility="visible";
 
 <div class="">
   <center>
-    <div class="visitors">
+    <div class="visitors" style="transform:scale(.75)">
       VISITORS
       <br>
       <script type="text/javascript" src="//counter.websiteout.net/js/30/0/0/0"></script>
