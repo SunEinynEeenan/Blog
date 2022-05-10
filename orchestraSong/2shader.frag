@@ -117,7 +117,7 @@
       vec4 color = vec4(st.x,st.y,0.0,1.0);
       vec4 logo = texture2D(u_tex0,st);
       vec3 logoMix = logo.rgb;
-      logoMix /= vec3(mouse2.xx,0.);
+      logoMix /= vec3(1.-mouse2.xx,0.);
 
 
 
