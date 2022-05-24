@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html >
+
+
+<script type="text/javascript" src="https://rawgit.com/patriciogonzalezvivo/glslCanvas/master/dist/GlslCanvas.js"></script>
+
+
+<script>
+
+
+let boolSwitch = false;
+let music = new Audio('./assets/02. Orchestra Song Master.wav');
+
+
+function playAndStop() {
+    boolSwitch=!boolSwitch;
+    // console.log(boolSwitch);
+
+    if (boolSwitch == true) {
+      music.play();
+      console.log("playing");
+    }
+    if (boolSwitch == false) {
+      music.pause();
+      music.currentTime = 0;
+      console.log("paused");
+    }
+}
+
+// WO
+
+function changeBG(){
+    if (boolSwitch == true){
+        document.getElementById("shader").style.visibility="visible";
+        document.body.style.backgroundColor = '#3616c4';
+
+    }
+    else {
+      document.getElementById("shader").style.visibility="hidden";
+      document.body.style.backgroundColor = '#ffffff';
+
+
+    }
+}
+</script>
+
+<style media="screen">
+
+
+  body{
+    background-color: white;
+  }
+
+  .shaderContainer{
+    border: 8px ridge blue;
+    width:375px;
+    height: 375px;
+  }
+
+  .border2{
+    border: 8px ridge purple;
+    width:391px;
+    height: 391px;
+
+  }
+
+    .button{
+      margin: 5% ;
+      transform:scale(.75);
+
+
+    }
+
+    .hide{
+      visibility: hidden;
+
+    }
+
+    .webring{
+      margin:3%;
+
+
+    }
+
+    .visitors{
+      color:blue;
+
+    }
+
+</style>
+
+
+<body>
+
+  <center>
+              <div class="border2">
+                <div class="shaderContainer"  width="375px" height="375px">
+                  <div class="">
+                    <canvas class="glslCanvas hide" id="shader" data-fragment-url="visualizer.frag" width="375px" height="375px"></canvas>
+                  </div>
+                </div>
+              </div>
+  </center>
+
+
+    <center>
+      <input class="button" type="button" value="Tetso Cube Lightride"
+              onclick=
+                "
+                playAndStop();
+                 changeBG();
+                 "
+                      />
+    </center>
+
+<!--
+    <a href="#" onclick="change();">Click Me</a><br/>
+<div id="d">This is just example</div> -->
+
+  <audio preload><source src="./assets/01. Tetso Cube Light Ride Master.wav" type="audio/x-wav" /></audio>
+
+
+
+</body>
+
+
+  <!-- ************ tandy web ring ******************* -->
+                     <div class="webring" >
+                         <webring-css site="https://the-people-s-coalition-of-tandy.github.io/PCoTandy/">
+                           <style>
+                              .webring {
+                                text-align: center;
+                                font: 100% system-ui, sans-serif;
+                              }
+
+                              .logo {
+                                  height: 50px;
+                              }
+
+                              #navigator {
+                                  display: flex;
+                                  justify-content: center;
+                                  gap: 8px;
+                              }
+
+                              #copy {
+                                margin-bottom: 10px;
+                              }
+                            </style>
+                            <div class="webring"     style="transform:scale(.75)">
+                                <div id="copy">
+                                  <strong>The Tandy Webring</strong>
+
+                                </div>
+                                    <div id="navigator">
+                                      <p>
+                                          <a href="https://juilie.github.io/JuiliuliuL/">[Prev]</a>
+                                      </p>
+                                          <img class="logo" src="https://raw.githubusercontent.com/The-People-s-Coalition-of-Tandy/Tandy-Webring/main/TandyLogo.png">
+                                      <p>
+                                          <a href="https://suneinyneeenan.github.io/Enhydrax/">[Next]</a>
+                                      </p>
+
+                                    </div>
+                          </div>
+                         </webring-css>
+                       </div>
+
+
+<div class="">
+  <center>
+    <div class="visitors" style="transform:scale(.75)">
+      VISITORS
+      <br>
+      <script type="text/javascript" src="//counter.websiteout.net/js/30/0/0/0"></script>
+    </div>
+  </center>
+
+
+</div>
+
+</html>

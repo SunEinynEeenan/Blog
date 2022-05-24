@@ -7,9 +7,31 @@
 
 <script>
 
+
+let boolSwitch = false;
+
+function counter() {
+    console.log(boolSwitch);
+    boolSwitch=!boolSwitch;
+    console.log(boolSwitch);
+}
+
+// WORKS
+
+
+
 function playMusic(){
   var music = new Audio('./assets/02. Orchestra Song Master.wav');
-  music.play();
+
+      if (boolSwitch = true){
+      music.play();
+          console.log(boolSwitch);
+
+      }
+
+      else {
+  
+    }
   }
 
 function change(){
@@ -17,6 +39,8 @@ document.getElementById("shader").style.visibility="visible";
 }
 
 </script>
+
+
 
 <style media="screen">
 
@@ -63,6 +87,7 @@ document.getElementById("shader").style.visibility="visible";
 
 <body>
 
+  <input type="button" onClick="counter()" value="counter"/>
 
 
   <center>
