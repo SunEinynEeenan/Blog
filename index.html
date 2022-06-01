@@ -189,7 +189,8 @@ white-space: pre;
 <div id="container9">
   <u> <font size="6">
  <!-- Peppo McBrandeis's Blog -- Levin-Bolt Madness -->
- Online Bulletin -- Robot Crambo's Cybersynergy
+ <!-- Online Bulletin -- Robot Crambo's Cybersynergy -->
+ Online Bulletin -- Sudo EchoHex's CyberCraft
 </font>
 </u>
 </div>
@@ -205,8 +206,74 @@ white-space: pre;
 
 
 
+<div class="pre">
+  just made a Raspberry Pi Server in my home in only a few hours.
+  I documented my journey so i can recreate it later or others can join in with a little less searching than me!
+
+my notes (with some light editing, taking out my system info and making more concise):
 
 
+im gonna follow (u don't need to do her document making steps, those are built into the imager):
+
+<a href="https://www.youtube.com/watch?v=O8AIuD_QAgE&ab_channel=CarolineDunn">https://www.youtube.com/watch?v=O8AIuD_QAgE&ab_channel=CarolineDunn</a>
+
+Once i got my terminal talking to an online PI
+(the Raspberry Pi imager app has all the SSH and wifi needed thigns so u can skip those parts)
+i followed this to get nginx on my pi
+
+<a href="https://www.youtube.com/watch?v=ECsQ8jbpMow&ab_channel=TonyTeachesTech">https://www.youtube.com/watch?v=ECsQ8jbpMow&ab_channel=TonyTeachesTech</a>
+
+(delete the < > and paste ur info (no brackets!))
+ssh <user>@<localIP>
+
+type exit to teminate ssh connection
+also cntrl c to end tasks
+
+
+then for server stuff i used this:
+
+<a href="https://www.youtube.com/watch?v=jfSLxs40sIw&ab_channel=Tinkernut">https://www.youtube.com/watch?v=jfSLxs40sIw&ab_channel=Tinkernut</a>
+
+
+had to go into xfinity app and go to port forwarding and choose raspberry pi @ port 80 (http) or 443 (https)
+
+also i made a account
+<a href="https://www.noip.com">https://www.noip.com</a>/
+
+and had to install these steps so that the pi could work with no-ip
+<a href="https://www.noip.com/support/knowledgebase/install-ip-duc-onto-raspberry-pi/">https://www.noip.com/support/knowledgebase/install-ip-duc-onto-raspberry-pi/</a>
+
+used Vi text editor since its installed automatically on pi (manipulating the files in SSH over wifi from laptop or whatever)
+
+
+vim file_name.extension —> create file or open file
+:w = save
+:wq = save and quit
+:q = quit
+:wget url.com = download the url asset to the server into root
+o to insert line after cursor, O for before
+highlight and D to delete line
+
+
+IF PERMISSION DENIED JSUT USE SUDO BEFORE COMMAND
+
+also helpful (this channel also has a good apt/linux/git overview video)
+<a href="https://www.youtube.com/watch?v=gyMpI8csWis&ab_channel=NetworkChuck">https://www.youtube.com/watch?v=gyMpI8csWis&ab_channel=NetworkChuck </a>
+
+
+to add new user to sudo group
+sudo usermod -a -G sudo <user>
+
+
+
+now im going to and try to implement
+
+<a href="https://github.com/epoupon/lms">https://github.com/epoupon/lms</a>
+
+</div>
+
+
+*********************************************
 
 <div class="pre" style="background-color: lightblue">
 
